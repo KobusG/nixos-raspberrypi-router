@@ -44,7 +44,6 @@
           nixos-hardware.nixosModules.raspberry-pi-4
           { imports = builtins.attrValues self.nixosModules; }
           {
-
             nix.nixPath = [ "nixpkgs=${nixpkgs}" ];
             nix.registry.nixpkgs.flake = nixpkgs;
             sdImage.compressImage = false;

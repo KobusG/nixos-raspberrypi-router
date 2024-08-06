@@ -1,12 +1,5 @@
 # NixOS router
 
-![](doc/banner.svg)
-
-## Hardware
-
-- Raspberry Pi Compute Module 4
-- [Waveshare CM4-DUAL-ETH-MINI](https://www.waveshare.com/wiki/CM4-DUAL-ETH-MINI)
-
 ## Build initial SD-card image
 
 ```bash

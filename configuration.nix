@@ -10,17 +10,19 @@ in
     users.users.root = {
       openssh.authorizedKeys.keyFiles = [
         (pkgs.fetchurl {
-          url = "https://github.com/MayNiklas.keys";
-          sha256 = "sha256-QW7XAqj9EmdQXYEu8EU74eFWml5V0ALvbQOnjk8ce/U=";
-        })
-        (pkgs.fetchurl {
-          url = "https://github.com/pinpox.keys";
-          sha256 = "sha256-V0ek+L0axLt8v1sdyPXHfZgkbOxqwE3Zw8vOT2aNDcE=";
+          url = "https://github.com/kobusg.keys";
         })
       ];
     };
 
     environment.systemPackages = with pkgs; [
+      nano
+      git
+      fzf
+      wget
+      python3
+      curl
+      docker-compose
       bmon # network bandwidth monitor
       conntrack-tools # view network connection states
       darkstat # network statistics web interface
@@ -48,13 +50,9 @@ in
     };
 
     # Time zone and internationalisation
-    time.timeZone = "Europe/Berlin";
+    time.timeZone = "Europe/Amsterdam";
 
     i18n.defaultLocale = "en_US.UTF-8";
-    console = {
-      font = "Lat2-Terminus16";
-      keyMap = "de";
-    };
 
     # Networking
     networking = {
